@@ -1,0 +1,1 @@
+ [sql中drop、truncate和delete的区别](https://www.cnblogs.com/dekevin/archive/2012/07/22/2604049.html)
