@@ -1,0 +1,7 @@
+Android的消息机制在Handler章节和ThreadLocal章节理解的一样，这里就不多做笔记了
+
+主要记录一些其他内容：
+
+## 主线程的消息循环
+
+> ActivityThread通过ApplicationThread和AMS进行进程间通信，AMS以进程间通信的方式完成ActivityThread的请求后会回调ApplicationThread中的Binder方法，然后ApplicationThread会向H发送消息，H收到消息后会将ApplicationThread中的逻辑切换到ActivityThread中去执行，也就是切换到主线程中执行。

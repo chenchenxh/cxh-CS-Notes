@@ -1,0 +1,2 @@
+AsyncTask和HandlerThread和IntentService的相关内容补充在了 **面经知识点整理/Android初步学习笔记归纳的对应文件中**
+

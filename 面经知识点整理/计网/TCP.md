@@ -28,7 +28,7 @@ https://blog.csdn.net/zerooffdate/article/details/79359726
 
 当Client端收到Server的SYN+ACK应答后，其状态变为ESTABLISHED，并发送ACK包给Server；
 
-如果此时ACK在网络中丢失，那么Server端该TCP连接的状态为SYN_RECV，并且**依次等待3秒、6秒、12秒后重新发送SYN+ACK包，以便Client重新发送ACK包，以便Client重新发送ACK包**。
+如果此时ACK在网络中丢失，那么Server端该TCP连接的状态为SYN_RECV，并且**依次等待3秒、6秒、12秒后重新发送SYN+ACK包，以便Client重新发送ACK包**。
 
 Server重发SYN+ACK包的次数，可以通过设置/proc/sys/net/ipv4/tcp_synack_retries修改，默认值为5。
 

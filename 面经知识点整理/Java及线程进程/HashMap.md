@@ -111,3 +111,18 @@ static class Entry<K,V> extends HashMap.Node<K,V> {
 会发现回到了HashMap的Node上了。
 
 **总结：TreeNode -> LinkedHashMap.Entry -> HashMap.Node -> Map.Entry**，就是这么个继承关系，所以直接可以直接判断HashMap上的节点是不是instanceof TreeNode，如果不是，那么就是普通的链表了。
+
+
+
+## hashmap的hash
+
+```java
+static final int hash(Object key) {
+    int h;
+    return (key == null) ? 0 : (h = key.hashCode()) ^ (h >>> 16);
+}
+```
+
+上面是java8中的hash值的求法，这就是 **扰动函数，32位的hashcode，高16位和低16位异或**，Java8之前采用的是4次异或。优点就是 **低位也能有高位的信息，能够更好的混淆多个对象**
+
+而在获得这个hash值之后是通过右移来获取index的： `tab[i = (n - 1) & hash]`，所以使用2 的幂。

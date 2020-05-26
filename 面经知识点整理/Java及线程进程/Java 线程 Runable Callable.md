@@ -25,6 +25,7 @@ System.out.println(re1+" "+re2);
 1. new Thread
 2. 线程池
 3. Runable
+4. Callable
 
 ## Runable和Callable和Thread的区别
 

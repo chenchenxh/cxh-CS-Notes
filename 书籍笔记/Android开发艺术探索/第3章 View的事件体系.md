@@ -70,7 +70,7 @@
 
 ![11](D:\typora\pic\11.png)
 
-> 当一个View需要处理时间，如果它设置了onTouchEvent，那么onTouch就会被调用......平时我们常用的onClickListener优先级最低，处于事件传递的尾端。
+> 当一个View需要处理事件，如果它设置了onTouchEvent，那么onTouch就会被调用......平时我们常用的onClickListener优先级最低，处于事件传递的尾端。
 
 传递的顺序：Activity -> Window -> View
 

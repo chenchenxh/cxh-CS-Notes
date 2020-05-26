@@ -11,7 +11,6 @@
 > 移动位数 = 已匹配的字符数 - 对应的部分匹配值
 
 ```java
-
 public class KMP {
  
 	void getNext(String pattern, int next[]) {

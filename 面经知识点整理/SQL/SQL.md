@@ -6,3 +6,8 @@
 select distinct name from stu where name not in(select distinct name from stu where score<80)
 ```
 
+
+
+### SQL左连接右连接
+
+https://blog.csdn.net/plg17/article/details/78758593
